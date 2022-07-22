@@ -29,11 +29,9 @@ public class App {
         System.out.println("testIntegerArea: " + testSquare.getTestIntegerArea());
         System.out.println("CalculateArea: " + testSquare.CalculateArea(INTLENGTH, INTWIDTH));*/
 
-//        System.out.println("\n");
-
         for (int i = 0; i < 5; i++) {
 
-//			System.out.printf("" + i + ".: ");
+			System.out.printf("" + i + ".: ");
 
             Integer rndSeconds1 = Library.randomInt(IN_BOUND);
             Integer rndSeconds2 = Library.randomInt(IN_BOUND);
@@ -49,7 +47,7 @@ public class App {
             System.out.println("" + rndSeconds3 + " s.");
 
             System.out.println("" /*+ (i + 1) + ". formattedDate: "*/ + rndSeconds1 + rndSeconds2 + formattedDate + rndSeconds3);
-//			System.out.println("\n");
+
         }
 
     }
