@@ -3,7 +3,7 @@ package com.example.demo;
 import java.util.Random;
 
 public class Library {
-    private static final int MS_IN_SECOND = 1000;
+    private static final double MS_IN_SECOND = 1000.0;
     private static final Random RANDOM = new Random();
 
     public static Integer randomInt(int bound) {
@@ -11,15 +11,14 @@ public class Library {
         return RANDOM.nextInt(bound);
     }
 
-    public static void sleepAFewSecondsOfRandomLength(int bound) {
-        int rndSeconds = RANDOM.nextInt(bound);
-        System.out.println("" + rndSeconds + " s.");
+    public static void sleepAFewSecondsOfRandomLength(double bound) {
+        double rndSeconds = RANDOM.nextDouble(bound);
         sleepAFewSeconds(rndSeconds);
     }
 
-    public static void sleepAFewSeconds(int seconds) {
+    public static void sleepAFewSeconds(double seconds) {
         try {
-            Thread.sleep((long) seconds * MS_IN_SECOND);
+            Thread.sleep((long) (seconds * MS_IN_SECOND));
         } catch (InterruptedException e) {
             e.printStackTrace();
             Thread.currentThread().interrupt();

@@ -11,16 +11,17 @@ import java.time.format.DateTimeFormatter;
 public class App {
 
     private static final int IN_BOUND = 9;
-    private static final int INTLENGTH = 30;
-    private static final int INTWIDTH = 40;
+    private static final double IN_BOUND_SECONDS = 1.0;
+
+/*	private static final int INTLENGTH = 30;
+	private static final int INTWIDTH = 40;*/
 
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
 
-        System.out.println("Hello World!");
+//		System.out.println("Hello World!");
 
 /*        ImpCalcSquareArea testSquare = new ImpCalcSquareArea();
-
         System.out.println("TestSquare: " + testSquare.getClass());
         System.out.println("testIntegerArea: " + testSquare.squareID);
         System.out.println("getTestIntegerLength: " + testSquare.getGetTestIntegerLengthInit());
@@ -28,25 +29,27 @@ public class App {
         System.out.println("testIntegerArea: " + testSquare.getTestIntegerArea());
         System.out.println("CalculateArea: " + testSquare.CalculateArea(INTLENGTH, INTWIDTH));*/
 
-        System.out.println("\n");
+//        System.out.println("\n");
 
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < 5; i++) {
 
-            System.out.println(Library.randomInt(IN_BOUND));
-            System.out.println("----------------  " + " e76bdddb-f596-4a6e-9bab-fefc36c85016 " + "  -----------");
+//			System.out.printf("" + i + ".: ");
 
-            System.out.println(Library.randomInt(IN_BOUND));
+            Integer rndSeconds1 = Library.randomInt(IN_BOUND);
+            Integer rndSeconds2 = Library.randomInt(IN_BOUND);
+            Integer rndSeconds3 = Library.randomInt(IN_BOUND);
 
-            Integer rndSeconds = Library.randomInt(IN_BOUND);
-            Integer rndSecond2 = Library.randomInt(IN_BOUND);
-            Integer rndSecond3 = Library.randomInt(IN_BOUND);
+            String formattedDate = DateTimeFormatter.ofPattern("SSSSSS").withZone(ZoneId.systemDefault())
+                    .format(Instant.now());
 
-            String formattedDate = DateTimeFormatter.ofPattern("SSSSSS").withZone(ZoneId.systemDefault()).format(Instant.now());
+            Library.sleepAFewSecondsOfRandomLength(IN_BOUND_SECONDS);
 
-            Library.sleepAFewSecondsOfRandomLength(IN_BOUND);
+            System.out.println("" + rndSeconds1 + " s.");
+            System.out.println("" + rndSeconds2 + " s.");
+            System.out.println("" + rndSeconds3 + " s.");
 
-            System.out.println("" /*+ (i + 1) + ". formattedDate: "*/ + rndSeconds + rndSecond2 + formattedDate + rndSecond3);
-
+            System.out.println("" /*+ (i + 1) + ". formattedDate: "*/ + rndSeconds1 + rndSeconds2 + formattedDate + rndSeconds3);
+//			System.out.println("\n");
         }
 
     }
