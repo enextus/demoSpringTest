@@ -46,7 +46,7 @@ public class App {
             System.out.println("" + rndSeconds2 + " s.");
             System.out.println("" + rndSeconds3 + " s.");
 
-            System.out.println("" /*+ (i + 1) + ". formattedDate: "*/ + rndSeconds1 + rndSeconds2 + formattedDate + rndSeconds3);
+            System.out.println("" + (i + 1) + ". formattedDate: " + rndSeconds1 + rndSeconds2 + formattedDate + rndSeconds3);
 
         }
 
