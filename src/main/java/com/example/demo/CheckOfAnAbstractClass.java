@@ -1,13 +1,10 @@
 package com.example.demo;
 
 public abstract class CheckOfAnAbstractClass {
-
     public String squareID;
-
     private Integer testIntegerArea;
     private Integer getTestIntegerLengthInit;
     private Integer getTestIntegerWidthInit;
-
     public String getSquareID() {
         return squareID;
     }
@@ -37,5 +34,4 @@ public abstract class CheckOfAnAbstractClass {
     }
 
     public abstract Integer CalculateArea(Integer getTestIntegerLength, Integer getTestIntegerWidth);
-
 }

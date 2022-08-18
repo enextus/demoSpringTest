@@ -1,6 +1,5 @@
 package com.example.demo;
 
-
 public class ImpCalcSquareArea extends CheckOfAnAbstractClass {
 
     public ImpCalcSquareArea() {
