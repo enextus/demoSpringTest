@@ -12,7 +12,7 @@ public class Library {
     }
 
     public static void sleepAFewSecondsOfRandomLength(double bound) {
-        double rndSeconds = RANDOM.nextDouble(bound);
+        double rndSeconds = RANDOM.nextDouble();
         sleepAFewSeconds(rndSeconds);
     }
 
